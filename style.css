@@ -2,6 +2,7 @@
 
 *{
     padding: 0;
+    font-family: 'Lato';
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -39,6 +40,10 @@
     left: 0;
 }
 
+.hamburger{
+    display: none;
+}
+
 .logo{
     width: 100px;
 }
@@ -49,7 +54,7 @@
 
 .nav-list{
     display: flex;
-    width: 57%;
+    width: 70%;
     align-items: center;
     list-style-type: none;
     justify-content: space-between;
@@ -121,8 +126,11 @@ a.btn{
 .about-title{
     text-align: center;
     color: rgb(153, 102, 204);
+
     font-size: 40px;
     margin-bottom: 40px;
+    padding:10px ;
+    background-color: rgba(114, 253, 1, 0.247);
     border: 2px solid white;
 }
 
@@ -216,6 +224,10 @@ a.btn{
     font-size: 20px;
 }
 
+.name{
+    color: #222;
+}
+
 
 
 
@@ -289,4 +301,69 @@ a.btn{
 .join-container h1{
     line-height: 45px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Making The Website Responsive  */
+
+/* navigation bar  */
+@media screen and (max-width:900px){
+    .nav-list{
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50vw;
+        height: 100vh;
+        background-color: #222;
+        padding: 200px 0;
+        font-size: 30px;
+    }
+    .hamburger{
+        display: inline-block;
+        width: 30px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        justify-content: space-between;
+        align-items: flex-start;
+        border: none;
+        outline: none;
+        z-index: 1000;
+    }
+    .lg-line1 , .lg-line2{
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        transition: .2s;
+    }
+    .sh-line{
+        width: 70%;
+        height: 2px;
+        background-color: white;
+        transition: .1s;
+    }
+}
+
+/* @media screen and (max-width:700px){
+    .nav-list{
+
+        font-size: 20px;
+    }
+} */
 
