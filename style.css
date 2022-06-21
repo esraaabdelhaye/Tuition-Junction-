@@ -49,10 +49,11 @@
 
 .nav-list{
     display: flex;
-    width: 60%;
+    width: 57%;
     align-items: center;
     list-style-type: none;
     justify-content: space-between;
+    z-index: 100;
 }
 
 .nav-link{
@@ -68,9 +69,9 @@
 #home{
     margin-bottom: 80px;
 }
-#about{
-    margin-bottom: 80px;
-    padding-top: 70px;
+#about, #our-lessons , #join{
+    margin-bottom: 80px !important;
+    padding-top: 70px !important;
 }
 
 #home{
@@ -85,6 +86,7 @@
     flex-direction: column;
     color: white;
     padding: 30px;
+    z-index: 100;
 }
 
 #home h1{
@@ -106,7 +108,10 @@
 }
 
 a.btn{
+    display: inline-block;
     color: rgb(153, 102, 204);
+    margin-left: 30px;
+    padding: 10px 20px;
 }
 
 
@@ -118,8 +123,10 @@ a.btn{
     color: rgb(153, 102, 204);
     font-size: 40px;
     margin-bottom: 40px;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.397);
+    border: 2px solid white;
 }
+
+
 
 .txt{
     background-color: #50c3f885;
@@ -162,24 +169,48 @@ a.btn{
     color: rgba(0, 0, 0, 0.651);
 }
 .tutor1-img{
-    margin-right: 50px; 
+    margin-right: 70px; 
 }
 .tutor2-img{
-    margin-left: 50px; 
+    margin-left: 70px; 
 }
 
 
 .tutor-img img {
     width: 100%;
-    border-radius: 50%;
+    border-radius: 5px;
 }
 
-#about li{
+.tutor-img{
+    position: relative;
+    z-index: -1;
+}
+
+.tutor-img::before{
+    content: '';
+    border: 10px solid rgb(153,102,204);
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    position: absolute;
+    z-index: -2;
+    top: 20px;
+}
+
+.tutor1-img::before{
+    left: 20px;
+}
+
+.tutor2-img::before{
+    right: 20px;
+}
+
+#about li , #our-lessons ul li{
     margin-left: 50px;
     color: rgba(0, 0, 0, 0.651);
 }
 
-#about li::marker{
+#about li::marker , #our-lessons ul li::marker{
     color: #50c2f8;
     font-weight: bold;
     font-size: 20px;
@@ -187,4 +218,75 @@ a.btn{
 
 
 
+
+/* Our Lessons  */
+
+#our-lessons{
+    padding: 0 50px;
+}
+
+.our-lessons-container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.lessons , .homeschooling{
+    box-shadow: 3px 3px 10px rgba(153, 102, 204, 0.637);
+    width: 40%;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 70px 25px;
+    transition: .3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+
+.lessons-title{
+    margin-bottom: 20px;
+    color: #24b6fa;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.details{
+    line-height: 30px;
+}
+
+
+#our-lessons button{
+    margin: 30px auto;
+}
+
+
+/* Join Us Section  */
+
+#join{
+    background:linear-gradient(rgba(0, 0, 0, 0.85) , rgba(0, 0, 0, 0.85)) ,url(./assets/join2.webp);
+    background-position:center;
+    background-size: cover;
+    height: 70vh;
+    padding: 30px 150px;
+}
+
+.join-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color:#93d6f5;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 30px 150px;
+    background-attachment: fixed;
+}
+
+.join-container h1{
+    line-height: 45px;
+}
 
