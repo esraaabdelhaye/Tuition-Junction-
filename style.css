@@ -29,7 +29,8 @@
 /* Header  */
 .header{
     display: flex;
-    width: 100%;
+    max-width: 100vw;
+    min-width: 100vw;
     height: 70px;
     background-color: rgba(17, 17, 17, 0.795);
     justify-content: space-between;
@@ -38,6 +39,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 100;
 }
 
 .hamburger{
@@ -59,6 +61,7 @@
     list-style-type: none;
     justify-content: space-between;
     z-index: 100;
+    transition: .5s;
 }
 
 .nav-link{
@@ -318,7 +321,7 @@ a.btn{
 
 
 
-/* Making The Website Responsive  */
+/* Making The Website Responsive ON Tablet (650px - 900px  */
 
 /* navigation bar  */
 @media screen and (max-width:900px){
@@ -327,11 +330,8 @@ a.btn{
         position: absolute;
         top: 0;
         right: 0;
-        width: 50vw;
         height: 100vh;
         background-color: #222;
-        padding: 200px 0;
-        font-size: 30px;
     }
     .hamburger{
         display: inline-block;
@@ -360,10 +360,19 @@ a.btn{
     }
 }
 
-/* @media screen and (max-width:700px){
-    .nav-list{
 
+@media screen and (max-width:900px) and (min-width:650px){
+    .nav-list{
+        width: 50vw;
+        padding: 150px 0;
+        font-size: 25px;
+    }
+}
+@media screen and (max-width:650px){
+    .nav-list{
+        width: 100vw;
+        padding: 100px 0;
         font-size: 20px;
     }
-} */
+}
 
