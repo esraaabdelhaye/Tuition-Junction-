@@ -1,3 +1,5 @@
+// Open Close Nav Bar 
+
 const hamburger = document.querySelector('.hamburger');
 const navList = document.querySelector('.nav-list')
 const shLine = document.querySelector('.sh-line');
@@ -22,3 +24,50 @@ function openCloseNavBar(){
 
     }
 }
+
+
+// Scroll Container 
+
+const rightArrow = document.querySelector('.go-right')
+const leftArrow = document.querySelector('.go-left')
+const scrollContainer = document.querySelector('.reviews-container');
+
+
+rightArrow.addEventListener('click' , goRight)
+leftArrow.addEventListener('click' , goLeft)
+
+
+function goRight(){
+    if(scrollContainer.scrollLeft!=(scrollContainer.scrollWidth-1005)){
+        scrollContainer.scrollLeft+= (window.innerWidth );
+        console.log(scrollContainer.scrollLeft , scrollContainer.scrollWidth-1005);
+    }
+}
+
+function goLeft(){
+    if(scrollContainer.scrollLeft!=0){
+        scrollContainer.scrollLeft-= (window.innerWidth );
+    }
+}
+
+// Change The Nav Link Color 
+
+const sections = document.querySelectorAll('section')
+const navLi = document.querySelectorAll('.nav-link')
+
+window.onscroll = () => {
+    let current = "";
+  
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (window.pageYOffset >= sectionTop ) {
+        current = section.getAttribute("id"); }
+    });
+  
+    navLi.forEach((li) => {
+      li.classList.remove("current");
+      if (li.href.includes(current)) {
+        li.classList.add('current');
+        }
+    });
+  };

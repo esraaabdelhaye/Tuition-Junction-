@@ -9,7 +9,7 @@
 }
 
 .current{
-    color: #50c2f8;
+    color: #50c2f8 !important;
 }
 
 .btn{
@@ -83,6 +83,16 @@
     color: white;
     text-decoration: none;
     transition: .2s;
+}
+
+.fab{
+    color: #0db2ff9c;
+    font-size: 20px;
+    margin:10px;
+}
+
+.fab:hover{
+    color: #0db2ff;
 }
 
 
@@ -492,15 +502,21 @@ a.btn{
 /* Reviews Section   */
 /* ----------------------------------------------------------------------------  */
 
-
 #reviews{
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+#reviews h1{
+    margin: 35px 0;
+}
+
 .reviews-container{
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
+    width: 100%;
+    overflow-x: hidden;
+    margin-bottom: 20px;
 }
 .review{
     background-color: #f0f0f0;
@@ -508,10 +524,12 @@ a.btn{
     padding: 20px;
     border-radius: 10px;
     border: 2px solid #0db2ff;
-    width: 300px;
+    /* min-width: 300px; */
+    margin:0 2.5vw;
+    min-width: 45vw;
     height: 250px;
-    margin-bottom: 40px;
 }
+
 
 .review-img{
     width: 60px;
@@ -521,7 +539,6 @@ a.btn{
     display: flex;
     justify-content: center;
     align-items: center;
-    display: inline-block;
     margin: 0 10px 30px 0;
 }
 
@@ -542,42 +559,118 @@ a.btn{
     font-family: 'segoe print';
     line-height: 20px;
     font-size: 12px;
-    display: inline-block;
+}
+
+.go-left , .go-right{
+    margin: 50px 0;
+    font-size: 35px;
 }
 
 /* ----------------------------------------------------------------------------  */
 /* Making Reviews Section Responsive  */
 /* ----------------------------------------------------------------------------  */
 
-
-@media screen and (max-width:650px){
-    .reviews-container{
-        flex-direction: column;
-    }
+ @media screen and (max-width:550px){
 
     .review{
-        width: 100%;
-        height: 200px;
+        min-width: 90vw;
+        margin:0 5vw ;
     }
-}
-@media screen and (max-width:450px){
-    .review{
-        height: 250px;
-    }
+
 }
 
 
 
 /* ----------------------------------------------------------------------------  */
-/* Contact Section   */
+/* Footer   */
 /* ----------------------------------------------------------------------------  */
 
 
+.footer-container{
+    background-color: rgb(34, 34, 34);
+    color: white;
+    padding: 70px 30px 0px 30px;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1.5fr;
+    grid-template-rows: 5fr 2fr ;
+    grid-template-areas: "logo social links"
+                         "logo footer footer" ;
+    width: 100%;
+    row-gap: 30px;
+}
 
 
+.logo-cont{
+    grid-area: logo;
+}
 
+.footer-logo{
+    width: 150px;
+}
 
+.logo-cont h1{
+    color: #50c2f8;
+}
+.social{
+    grid-area: social;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.footer{
+    grid-area: footer;
+}
 
+.footer-links{
+    grid-area: links;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
 
+.footer-links li a{
+    color: white;
+    text-decoration: none;
+    transition: .1s;
+}
 
+.footer-links li{
+    margin-bottom: 10px;
+
+}
+.footer-links li a:hover{
+    color: #0db2ff;
+}
+
+.footer-logo img{
+    width: 100%;
+}
+
+.footer{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.644);
+}
+
+footer .fab{
+    font-size: 30px;
+}
+
+.whatsapp{
+    margin: 20px 0;
+}
+
+/* ----------------------------------------------------------------------------  */
+/* Making The Footer Responsive  */
+/* ----------------------------------------------------------------------------  */
+
+@media screen and (max-width:550px) {
+    .footer-container{
+        grid-template-rows: 1fr 1fr .5fr;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: "logo logo"
+                              "social links"
+                              "footer footer";
+        align-content: center;
+    }
+}
