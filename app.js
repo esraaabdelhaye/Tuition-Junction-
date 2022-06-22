@@ -72,11 +72,4 @@ window.onscroll = () => {
     });
   };
 
-  navLi.forEach(li=> li.addEventListener('click' , closeNavBar))
-
-  function closeNavBar(){
-    if(window.innerWidth<=650)
-        navList.style.right= '-100vw'
-    else
-        navList.style.right= '-50vw'
-  }
+  navLi.forEach(li=> li.addEventListener('click' , openCloseNavBar))
