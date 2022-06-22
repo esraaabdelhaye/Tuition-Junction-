@@ -8,6 +8,9 @@
     scroll-behavior: smooth;
 }
 
+.current{
+    color: #50c2f8;
+}
 
 .btn{
     background-color: #50c2f8;
@@ -26,8 +29,9 @@
     transform: scale(1.05);
 }
 
-
+/* ----------------------------------------------------------------------------  */
 /* Header  */
+/* ----------------------------------------------------------------------------  */
 .header{
     display: flex;
     max-width: 100vw;
@@ -45,6 +49,16 @@
 
 .hamburger{
     display: none;
+}
+
+.sh-line.opened{
+    width: 0px;
+}
+.lg-line1.opened{
+    transform: rotate(45deg) translate(2px , 13px) ;
+}
+.lg-line2.opened{
+    transform: rotate(-45deg) translateY(-10px) ;
 }
 
 .logo{
@@ -71,9 +85,10 @@
     transition: .2s;
 }
 
-.current{
-    color: #50c2f8;
-}
+
+/* ----------------------------------------------------------------------------  */
+/* Home Section  */
+/* ----------------------------------------------------------------------------  */
 
 #home{
     margin-bottom: 80px;
@@ -123,22 +138,95 @@ a.btn{
     padding: 10px 20px;
 }
 
+/* ----------------------------------------------------------------------------  */
+/* Making The Navigation Bar And Home Responsive  */
+/* ----------------------------------------------------------------------------  */
 
-/* About  */
+@media screen and (max-width:900px){
+    .nav-list{
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        background-color: #222;
+    }
+    .hamburger{
+        display: inline-block;
+        width: 30px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        justify-content: space-between;
+        align-items: flex-start;
+        border: none;
+        outline: none;
+        z-index: 1000;
+    }
+    .lg-line1 , .lg-line2{
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        transition: .2s;
+    }
+    .sh-line{
+        width: 70%;
+        height: 2px;
+        background-color: white;
+        transition: .1s;
+    }
+}
 
+
+@media screen and (max-width:900px) and (min-width:650px){
+    .nav-list{
+        width: 50vw;
+        padding: 150px 0;
+        font-size: 25px;
+        right: -50vw;
+    }
+    .tutor-txt{
+        margin-top: 0;
+    }
+}
+@media screen and (max-width:650px){
+    .nav-list{
+        width: 100vw;
+        padding: 100px 0;
+        right: -100vw;
+        font-size: 20px;
+    }
+    .tutors{
+        flex-direction: column;
+    }
+    .tutor{
+        flex-direction: column;
+    }
+    .tutor2-img{
+        order: 1;
+    }
+    .tutor-txt{
+        order: 2;
+    }
+    .tutor-txt{
+        margin-top: 80px;
+    }
+}
+
+/* ----------------------------------------------------------------------------  */
+/* About Section  */
+/* ----------------------------------------------------------------------------  */
 
 .about-title{
     text-align: center;
     color: rgb(153, 102, 204);
-
+    font-family: 'segoe script';
     font-size: 40px;
     margin-bottom: 40px;
     padding:10px ;
     background-color: rgba(114, 253, 1, 0.247);
     border: 2px solid white;
 }
-
-
 
 .txt{
     background-color: #50c3f885;
@@ -149,12 +237,12 @@ a.btn{
     font-size: 17px;
     font-weight: 400;
     line-height: 35px;
-    color: #222;
-
+    color: rgba(46, 46, 46, 0.897);
 }
 
-
+/* ----------------------------------------------------------------------------  */
 /* Tutors  */
+/* ----------------------------------------------------------------------------  */
 
 .tutor{
     display: flex;
@@ -196,7 +284,7 @@ a.btn{
 .tutor-img{
     position: relative;
     z-index: -1;
-    /* height: fit-content; */
+    height: fit-content;
 }
 
 .tutor-img::before{
@@ -233,10 +321,54 @@ a.btn{
     color: #222;
 }
 
+/* ----------------------------------------------------------------------------  */
+/* Making The About Section Responsive  */
+/* ----------------------------------------------------------------------------  */
 
+@media screen and (max-width:900px) and (min-width:650px){
+    .tutor-txt{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .tutor-img{
+        margin-top: 0;
+    }
+}
+@media screen and (max-width:650px){
+    .tutors{
+        flex-direction: column;
+    }
+    .tutor{
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    .tutor2-img{
+        order: 1;
+    }
+    .tutor-txt{
+        order: 2;
+    }
+    .tutor-txt{
+        margin-top: 80px;
+    }
+}
 
+@media screen and (max-width:400px){
+    .about-title{
+        font-size: 30px;
+    }
+    .about-txt{
+        font-size: 14px;
+    }
+    #about, #our-lessons , #join{
+        padding-top: 70px !important;
+        margin-bottom: 0px !important;
+    }
+}
 
-/* Our Lessons  */
+/* ----------------------------------------------------------------------------  */
+/* Our Lessons Section */
+/* ----------------------------------------------------------------------------  */
 
 #our-lessons{
     padding: 0 50px;
@@ -248,7 +380,7 @@ a.btn{
     width: 100%;
 }
 
-.lessons , .homeschooling{
+.item{
     box-shadow: 3px 3px 10px rgba(153, 102, 204, 0.637);
     width: 40%;
     background-color: #f0f0f0;
@@ -280,7 +412,37 @@ a.btn{
 }
 
 
-/* Join Us Section  */
+/* ----------------------------------------------------------------------------  */
+/* Making Our Lessons Section Responsive  */
+/* ----------------------------------------------------------------------------  */
+
+
+@media screen and (max-width:750px){
+    .our-lessons-container{
+        flex-direction: column;
+    }
+    .item{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .item + .item{
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width:400px){
+    .item{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+}
+
+
+/* ----------------------------------------------------------------------------  */
+/* Join Our Team Section */
+/* ----------------------------------------------------------------------------  */
+
 
 #join{
     background:linear-gradient(rgba(0, 0, 0, 0.85) , rgba(0, 0, 0, 0.85)) ,url(./assets/join2.webp);
@@ -288,9 +450,10 @@ a.btn{
     background-size: cover;
     height: 70vh;
     padding: 30px 150px;
+    max-width: 100vw ;
 }
 
-.join-container{
+.join-txt{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -303,79 +466,37 @@ a.btn{
     background-attachment: fixed;
 }
 
-.join-container h1{
+.join-txt h1{
     line-height: 45px;
 }
 
 
 
+/* ----------------------------------------------------------------------------  */
+/* Making Join Us Section Responsive  */
+/* ----------------------------------------------------------------------------  */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* Making The Website Responsive ON Tablet (650px - 900px  */
-
-/* navigation bar  */
-@media screen and (max-width:900px){
-    .nav-list{
-        flex-direction: column;
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        background-color: #222;
+@media screen and (max-width:750px){
+    #join{
+        padding:30px;
     }
-    .hamburger{
-        display: inline-block;
-        width: 30px;
-        height: 20px;
-        display: flex;
-        flex-direction: column;
-        background-color: transparent;
-        justify-content: space-between;
-        align-items: flex-start;
-        border: none;
-        outline: none;
-        z-index: 1000;
-    }
-    .lg-line1 , .lg-line2{
-        width: 100%;
-        height: 2px;
-        background-color: white;
-        transition: .2s;
-    }
-    .sh-line{
-        width: 70%;
-        height: 2px;
-        background-color: white;
-        transition: .1s;
+    .join-txt{
+        padding: 30px ;
     }
 }
 
 
-@media screen and (max-width:900px) and (min-width:650px){
-    .nav-list{
-        width: 50vw;
-        padding: 150px 0;
-        font-size: 25px;
-    }
-}
-@media screen and (max-width:650px){
-    .nav-list{
-        width: 100vw;
-        padding: 100px 0;
-        font-size: 20px;
-    }
-}
+/* ----------------------------------------------------------------------------  */
+/* Reviews Section   */
+/* ----------------------------------------------------------------------------  */
 
-/*  */
+
+
+
+
+
+
+
+
+
