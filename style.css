@@ -8,6 +8,7 @@
     scroll-behavior: smooth;
 }
 
+
 .btn{
     background-color: #50c2f8;
     color: rgb(153, 102, 204);
@@ -195,6 +196,7 @@ a.btn{
 .tutor-img{
     position: relative;
     z-index: -1;
+    /* height: fit-content; */
 }
 
 .tutor-img::before{
@@ -376,3 +378,4 @@ a.btn{
     }
 }
 
+/*  */
