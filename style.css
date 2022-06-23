@@ -2,7 +2,7 @@
 
 *{
     padding: 0;
-    font-family: 'Lato';
+    font-family: 'Nunito', sans-serif;
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -20,7 +20,6 @@
     border-radius: 10px;
     font-weight: bold;
     transition: .5s;
-    font-weight: bold;
 }
 
 .btn:hover{
@@ -33,6 +32,7 @@
 /* Header  */
 /* ----------------------------------------------------------------------------  */
 .header{
+
     display: flex;
     max-width: 100vw;
     min-width: 100vw;
@@ -104,6 +104,7 @@
     margin-bottom: 80px;
 }
 #about, #our-lessons , #join , #reviews{
+
     margin-bottom: 80px !important;
     padding-top: 70px !important;
 }
@@ -230,7 +231,7 @@ a.btn{
 .about-title{
     text-align: center;
     color: rgb(153, 102, 204);
-    font-family: 'segoe script';
+    /* font-family: 'segoe script'; */
     font-size: 40px;
     margin-bottom: 40px;
     padding:10px ;
@@ -273,7 +274,7 @@ a.btn{
 .quote{
     color: #24b6fa;
     font-size: 20px;
-    font-family: 'segoe print';
+    /* font-family: 'segoe print'; */
     margin: 30px 0;
 }
 
@@ -558,9 +559,9 @@ a.btn{
 
 .review-txt{
     color: rgba(34, 34, 34, 0.87);
-    font-family: 'segoe print';
+    /* font-family: 'segoe print'; */
     line-height: 20px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -579,7 +580,10 @@ a.btn{
         min-width: 90vw;
         margin:0 5vw ;
     }
-
+    .review-txt{
+        font-size: 14px;
+        font-weight: bold;
+    }
 }
 
 
