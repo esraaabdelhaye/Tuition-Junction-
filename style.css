@@ -234,8 +234,9 @@ a.btn{
     font-size: 40px;
     margin-bottom: 40px;
     padding:10px ;
-    background-color: rgba(114, 253, 1, 0.247);
+    background-color:white;
     border: 2px solid white;
+    border-radius: 5px;
 }
 
 .txt{
@@ -273,6 +274,7 @@ a.btn{
     color: #24b6fa;
     font-size: 20px;
     font-family: 'segoe print';
+    margin: 30px 0;
 }
 
 .brief-intro,.ul-2{
@@ -558,7 +560,8 @@ a.btn{
     color: rgba(34, 34, 34, 0.87);
     font-family: 'segoe print';
     line-height: 20px;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .go-left , .go-right{
