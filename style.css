@@ -85,13 +85,13 @@
     transition: .2s;
 }
 
-.fab{
+.fab,.fa{
     color: #0db2ff9c;
     font-size: 20px;
     margin:10px;
 }
 
-.fab:hover{
+.fab:hover , .fa:hover{
     color: #0db2ff;
 }
 
@@ -103,7 +103,7 @@
 #home{
     margin-bottom: 80px;
 }
-#about, #our-lessons , #join , #reviews{
+#about, #our-lessons , #join{
 
     margin-bottom: 80px !important;
     padding-top: 70px !important;
@@ -127,7 +127,7 @@
 #home h1{
     text-shadow: 3px 3px 10px rgb(0, 0, 0);
     font-size: 50px;
-    max-width: 500px;
+    max-width: 600px;
     text-align: center;
     margin: 40px 0;
 }
@@ -159,7 +159,7 @@ a.btn{
         position: absolute;
         top: 0;
         height: 100vh;
-        background-color: #222;
+        background-color: black;
     }
     .hamburger{
         display: inline-block;
@@ -249,7 +249,7 @@ a.btn{
     font-size: 17px;
     font-weight: 400;
     line-height: 35px;
-    color: rgba(46, 46, 46, 0.897);
+    color: black;
 }
 
 /* ----------------------------------------------------------------------------  */
@@ -279,7 +279,7 @@ a.btn{
 }
 
 .brief-intro,.ul-2{
-    color: rgba(0, 0, 0, 0.651);
+    color: rgb(0, 0, 0);
 }
 .tutor1-img{
     margin-right: 70px; 
@@ -321,7 +321,7 @@ a.btn{
 
 #about li , #our-lessons ul li{
     margin-left: 50px;
-    color: rgba(0, 0, 0, 0.651);
+    color: rgb(0, 0, 0);
 }
 
 #about li::marker , #our-lessons ul li::marker{
@@ -509,6 +509,8 @@ a.btn{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 70px;
+    margin-bottom: 40px;
 }
 
 #reviews h1{
@@ -558,7 +560,7 @@ a.btn{
 }
 
 .review-txt{
-    color: rgba(34, 34, 34, 0.87);
+    color: rgb(34, 34, 34);
     /* font-family: 'segoe print'; */
     line-height: 20px;
     font-size: 15px;
@@ -659,12 +661,16 @@ a.btn{
     color: rgba(255, 255, 255, 0.644);
 }
 
-footer .fab{
+.icons{
+    margin-top: 20px;
+}
+
+footer .fab , footer .fa{
     font-size: 30px;
 }
 
 .whatsapp{
-    margin: 20px 0;
+    margin: 20px 0 0 0;
 }
 
 /* ----------------------------------------------------------------------------  */
